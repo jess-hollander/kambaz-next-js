@@ -7,7 +7,7 @@ export default function Signup() {
             <input placeholder="username" /><br />
             <input placeholder="password" type="password" /><br />
             <input placeholder="verify password" type="password" /><br />
-            <Link href="Profile" > Sign up </Link><br /> [// had to change the to= as it was an invalid prop]
+            <Link href="Profile" > Sign up </Link><br />
             <Link href="Signin" >Sign in</Link>
         </div>
     );
