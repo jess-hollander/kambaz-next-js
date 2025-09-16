@@ -249,7 +249,7 @@ export default function Lab1() {
             <h5>Select many</h5>
             <label htmlFor="wd-select-many-genre">
                 Favorite all movie genres: </label><br />
-            <select id="wd-select-many-genre" multiple>
+            <select multiple id="wd-select-many-genre">
                 <option selected value="COMEDY">Comedy</option>
                 <option value="DRAMA">Drama</option>
                 <option selected value="SCIFI">
