@@ -2,10 +2,6 @@ export default function Modules() {
     return (
         <div>
             <button>Collapse All</button> <button>View Progress</button>
-            <h4 id="wd-dropdowns">Dropdowns</h4>
-            <h5>Select one</h5>
-            <label htmlFor="wd-select-one-option">
-                Favorite movie genre: </label><br />
             <select id="wd-select-one-option">
                 <option value="Publish All">Publish All</option>
             </select>
