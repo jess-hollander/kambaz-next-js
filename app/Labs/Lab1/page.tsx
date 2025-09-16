@@ -41,6 +41,16 @@ export default function Lab1() {
                     <li>Flip and cook the other side.</li>
                     <li>Serve and enjoy!</li>
                 </ol>
+
+                My favorite recipe:
+                <ol id="wd-your-favorite-recipe">
+                    <li>preheat oven</li>
+                    <li>mix ingredients</li>
+                    <li>bake</li>
+                    <li>let cool</li>
+                    <li>eat</li>
+                </ol>
+
             </div>
 
             <h5>Unordered List Tag</h5>
@@ -52,6 +62,15 @@ export default function Lab1() {
                 <li>Red Mars</li>
                 <li>The Forever War</li>
             </ul>
+
+            Your favorite books (in no particular order)
+            <ul id="wd-your-books">
+                <li>Fahrenheit 451</li>
+                <li>Brave New World</li>
+                <li>1984</li>
+                <li>Handmaid's Tale</li>
+            </ul>
+
 
             <div id="wd-tables">
                 <h4>Table Tag</h4>
@@ -71,6 +90,61 @@ export default function Lab1() {
                             <td>2/3/21</td>
                             <td>85</td>
                         </tr>
+                        <tr>
+                            <td>Q2</td>
+                            <td>CSS</td>
+                            <td>2/10/21</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>Q3</td>
+                            <td>CSS</td>
+                            <td>4/24/21</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Q4</td>
+                            <td>React</td>
+                            <td>6/21/25</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>Q5</td>
+                            <td>HTML</td>
+                            <td>5/21/23</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>Q6</td>
+                            <td>CSS</td>
+                            <td>8/19/20</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Q7</td>
+                            <td>Node</td>
+                            <td>7/4/22</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>Q8</td>
+                            <td>React</td>
+                            <td>4/30/25</td>
+                            <td>39</td>
+                        </tr>
+                        <tr>
+                            <td>Q9</td>
+                            <td>CSS</td>
+                            <td>8/14/22</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>Q10</td>
+                            <td>HTML</td>
+                            <td>12/12/23</td>
+                            <td>55</td>
+                        </tr>
+
                     </tbody>
                     <tfoot>					{/* table row */}
                         <tr>
@@ -79,6 +153,16 @@ export default function Lab1() {
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+
+            <div id="wd-images">
+                <h4>Image tag</h4>
+                Loading an image from the internet: <br />
+                <img id="wd-starship" width="400px" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg" />
+                <br />
+                Loading a local image:
+                <br />
+                <img id="wd-teslabot" src="/images/teslabot.jpg" height="200px" />
             </div>
 
             <div id="wd-forms">
@@ -95,13 +179,18 @@ export default function Lab1() {
                     <label htmlFor="wd-text-fields-last-name">Last name:</label>
                     <input type="text" id="wd-text-fields-last-name" placeholder="Doe"
                         value="Wonderland" title="The last name" />
-                    {/* copy rest of form elements here  */}
                 </form>
             </div>
 
             <h5>Text boxes</h5>
             <label>Biography:</label><br />
-            <textarea id="wd-textarea" cols={30} rows={10}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+            <textarea id="wd-textarea" cols={30} rows={10}>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia deserunt mollit anim id est laborum.</textarea>
 
             <h5 id="wd-buttons">Buttons</h5>
             <button id="wd-all-good"
@@ -195,7 +284,10 @@ export default function Lab1() {
                 id="wd-text-fields-dob"
                 value="2000-01-21" /><br />
 
-
+            <h4>Anchor tag</h4>
+            Please
+            <a href="https://www.lipsum.com" id="wd-lipsum">click here</a>
+            to get dummy text<br />
 
         </div>
     );
