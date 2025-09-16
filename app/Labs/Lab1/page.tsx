@@ -69,7 +69,7 @@ export default function Lab1() {
                 <li>Fahrenheit 451</li>
                 <li>Brave New World</li>
                 <li>1984</li>
-                <li>Handmaid's Tale</li>
+                <li>Handmaid&apos;s Tale</li>
             </ul>
 
 
