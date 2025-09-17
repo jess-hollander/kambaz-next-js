@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router';
+'use client';
+import { useParams } from 'next/navigation';
 export default function AssignmentEditor() {
-    const router = useRouter();
-    const { aid } = router.query;
+    const params = useParams();
+    const aid = params.aid;
 
     const assignments: Record<number, string> = {
         123: "A1 - ENV + HTML",
