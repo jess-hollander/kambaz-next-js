@@ -32,9 +32,9 @@ export default function AssignmentEditor() {
                     <td align="left" valign="middle">
                         <label htmlFor="wd-group">Assignment Group </label>
                         <select id="wd-group">
-                            <option value="ASSIGNMENTS">Assignments</option>
+                            <option selected value="ASSIGNMENTS">Assignments</option>
                             <option value="QUIZZES">Quizzes</option>
-                            <option selected value="EXAMS">Exams</option>
+                            <option value="EXAMS">Exams</option>
                             <option value="PROJECT">Project</option>
                         </select>
                     </td>
