@@ -3,8 +3,8 @@ export default function Signin() {
     return (
         <div id="wd-signin-screen">
             <h3>Sign in</h3>
-            <input placeholder="username" /> <br />
-            <input placeholder="password" type="password" />
+            <input placeholder="username" defaultValue={"jessica.hollander"} /> <br />
+            <input placeholder="password" type="password" defaultValue={"password123"} />
             <br />
             <Link id="wd-signin-btn" href="/Dashboard">
                 Sign in </Link><br />
