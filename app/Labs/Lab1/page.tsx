@@ -3,6 +3,14 @@ export default function Lab1() {
     return (
         <div id="wd-lab1">
             <h2>Lab 1</h2>
+            <h3>Resources</h3>
+            <div id="wd-resources">
+                <ul>
+                    <li><p>Jessica Hollander | CS4550, Section 01, CRN 11597</p></li>
+                    <li><a href="https://github.com/jess-hollander/kambaz-next-js">GitHub Repository</a></li>
+                </ul>
+            </div>
+
             <h3>HTML Examples</h3>
             <div id="wd-h-tag">
                 <h4>Heading Tags</h4>
