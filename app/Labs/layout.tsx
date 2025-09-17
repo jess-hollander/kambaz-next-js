@@ -5,7 +5,6 @@ export default function LabsLayout({ children }:
     Readonly<{ children: ReactNode }>) {
     return (
         <div>
-            <h1>Labs</h1>
             <table>
                 <tbody>
                     <tr>
@@ -16,6 +15,7 @@ export default function LabsLayout({ children }:
                     </tr>
                 </tbody>
             </table>
+            <h1>Labs</h1>
         </div>
     );
 }
