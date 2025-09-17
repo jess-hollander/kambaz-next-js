@@ -23,7 +23,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS2 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 2</p>
                             <button> Go </button>
                         </div>
                     </Link>
@@ -34,7 +34,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS3 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 3</p>
                             <button> Go </button>
                         </div>
                     </Link>
@@ -45,7 +45,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS4 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 4</p>
                             <button> Go </button>
                         </div>
                     </Link>
@@ -56,7 +56,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS5 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 5</p>
                             <button> Go </button>
                         </div>
                     </Link>
@@ -67,7 +67,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS6 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 6</p>
                             <button> Go </button>
                         </div>
                     </Link>
@@ -78,7 +78,7 @@ export default function Dashboard() {
                         <div>
                             <h5> CS7 React JS </h5>
                             <p className="wd-dashboard-course-title">
-                                Full Stack software developer</p>
+                                CS Course 7</p>
                             <button> Go </button>
                         </div>
                     </Link>
