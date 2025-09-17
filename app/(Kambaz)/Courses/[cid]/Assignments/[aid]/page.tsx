@@ -80,7 +80,7 @@ export default function AssignmentEditor() {
                 <tr>
                     <td align="left" valign="middle">
                         <label htmlFor="wd-text-fields-assign-to">Assign to</label>
-                        <input type="text" id="wd-text-fields-assign-to" />
+                        <input type="text" id="wd-text-fields-assign-to" defaultValue="Everyone"/>
                     </td>
                 </tr>
                 <tr>
