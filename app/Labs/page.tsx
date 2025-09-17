@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 export default function Labs() {
   return (
     <div id="wd-labs">
-      <h1>Labs</h1>
+      <h1>Labs Home</h1>
 
       <ul>
         <li>
