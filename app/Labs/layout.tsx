@@ -5,7 +5,7 @@ export default function LabsLayout({ children }:
     Readonly<{ children: ReactNode }>) {
     return (
         <div>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;Labs</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Labs</h1>
             <table>
                 <tbody>
                     <tr>
