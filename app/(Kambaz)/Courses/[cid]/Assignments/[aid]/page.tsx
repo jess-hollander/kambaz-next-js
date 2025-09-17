@@ -16,7 +16,7 @@ export default function AssignmentEditor() {
     return (
         <div id="wd-assignments-editor">
             <label htmlFor="wd-name">Assignment Name</label>
-            <input id="wd-name" value={assignmentName} /><br /><br />
+            <input id="wd-name" defaultValue={assignmentName} /><br /><br />
             <textarea id="wd-description">
                 The assignment is available online Submit a link to the landing page of your web application running on Netlify.
             </textarea>
@@ -25,14 +25,14 @@ export default function AssignmentEditor() {
                 <tr>
                     <td align="left" valign="middle">
                         <label htmlFor="wd-points">Points</label>
-                        <input id="wd-points" value={100} />
+                        <input id="wd-points" defaultValue={100} />
                     </td>
                 </tr>
                 <tr>
                     <td align="left" valign="middle">
                         <label htmlFor="wd-group">Assignment Group </label>
                         <select id="wd-group">
-                            <option selected value="ASSIGNMENTS">Assignments</option>
+                            <option value="ASSIGNMENTS">Assignments</option>
                             <option value="QUIZZES">Quizzes</option>
                             <option value="EXAMS">Exams</option>
                             <option value="PROJECT">Project</option>
@@ -89,7 +89,7 @@ export default function AssignmentEditor() {
                             Due </label>
                         <input type="date"
                             id="wd-text-fields-date"
-                            value="2024-05-13" />
+                            defaultValue="2024-05-13" />
                     </td>
                 </tr>
                 <tr>
@@ -98,14 +98,14 @@ export default function AssignmentEditor() {
                             Available from </label>
                         <input type="date"
                             id="wd-text-fields-available-from-date"
-                            value="2024-05-06" />
+                            defaultValue="2024-05-06" />
                     </td>
                     <td>
                         <label htmlFor="wd-text-until-date">
                             Until </label>
                         <input type="date"
                             id="wd-text-fields-until-date"
-                            value="2024-05-20" />
+                            defaultValue="2024-05-20" />
                     </td>
                 </tr>
             </table>
