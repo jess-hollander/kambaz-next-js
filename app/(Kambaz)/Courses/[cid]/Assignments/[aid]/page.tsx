@@ -25,16 +25,12 @@ export default function AssignmentEditor() {
                 <tr>
                     <td align="left" valign="middle">
                         <label htmlFor="wd-points">Points</label>
-                    </td>
-                    <td>
                         <input id="wd-points" value={100} />
                     </td>
                 </tr>
                 <tr>
                     <td align="left" valign="middle">
                         <label htmlFor="wd-group">Assignment Group </label>
-                    </td>
-                    <td>
                         <select id="wd-group">
                             <option value="ASSIGNMENTS">Assignments</option>
                             <option value="QUIZZES">Quizzes</option>
@@ -45,16 +41,24 @@ export default function AssignmentEditor() {
                 </tr>
                 <tr>
                     <td align="left" valign="middle">
-                        <label htmlFor="wd-submission-type">Submission Type </label>
+                        <label htmlFor="wd-group">Display Grade as </label>
+                        <select id="wd-group">
+                            <option value="PERCENTAGE">Percentage</option>
+                            <option value="POINTS">Points</option>
+                        </select>
                     </td>
-                    <td>
+                </tr>
+                <tr>
+                    <td align="left" valign="middle">
+                        <label htmlFor="wd-submission-type">Submission Type </label>
                         <select id="wd-submission-type">
                             <option value="ONLINE">Online</option><br />
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td align="right" valign="middle">
+                    <td></td>
+                    <td align="left" valign="middle">
                         <label>Online Entry Options</label><br />
 
                         <input type="checkbox" name="check-online" id="wd-chkbox-text-entry" />
@@ -85,7 +89,7 @@ export default function AssignmentEditor() {
                             Due </label>
                         <input type="date"
                             id="wd-text-fields-date"
-                            value="2024-13-05" />
+                            value="2024-05-13" />
                     </td>
                 </tr>
                 <tr>
@@ -94,14 +98,14 @@ export default function AssignmentEditor() {
                             Available from </label>
                         <input type="date"
                             id="wd-text-fields-available-from-date"
-                            value="2024-06-05" />
+                            value="2024-05-06" />
                     </td>
                     <td>
                         <label htmlFor="wd-text-until-date">
                             Until </label>
                         <input type="date"
                             id="wd-text-fields-until-date"
-                            value="2024-20-05" />
+                            value="2024-05-20" />
                     </td>
                 </tr>
             </table>
