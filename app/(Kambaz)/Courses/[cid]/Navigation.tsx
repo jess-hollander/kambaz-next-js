@@ -23,7 +23,7 @@ export default function CourseNavigation() {
             <Link href="/Courses/1234/Grades"
             className="list-group-item text-danger border-0">Grades
             </Link><br />
-            <Link href="/Courses/1234/People"
+            <Link href="/Courses/1234/People/Table"
             className="list-group-item text-danger border-0">People
             </Link><br />
         </div>
