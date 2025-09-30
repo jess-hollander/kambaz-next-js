@@ -6,7 +6,7 @@
         to a specific element by its ID
     </p>
     <p id="wd-id-selector-2">
-        Here's another paragraph using a different ID and
+        Here&apos;s another paragraph using a different ID and
         a different look and feel
     </p>
 </div>
