@@ -1,6 +1,6 @@
+"use client";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import ModulesControls from "./ModulesControls";
-import ModuleControlButtons from "./ModulesControls";
 import { BsGripVertical } from "react-icons/bs";
 import LessonControlButtons from "./LessonControlButtons";
 
@@ -14,7 +14,7 @@ export default function Modules() {
                     <div className="wd-title p-3 ps-2 bg-secondary">
                         <BsGripVertical className="me-2 fs-3" />
                         Week 1
-                        <ModuleControlButtons />
+                        <ModulesControls />
                     </div>
                     <ListGroup className="wd-lessons rounded-0">
                         <ListGroupItem className="wd-lesson p-3 ps-1">
