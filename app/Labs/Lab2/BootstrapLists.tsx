@@ -27,7 +27,7 @@ import { ListGroup } from "react-bootstrap";
                 2001 A Space Odyssey </ListGroup.Item>
             <ListGroup.Item action disabled
                 href="https://en.wikipedia.org/wiki/Ender%27s_Game">
-                Ender's Game         </ListGroup.Item>
+                Ender&apos;s Game         </ListGroup.Item>
             <ListGroup.Item action onClick={() => alert("New book added")}>
                 Add another book     </ListGroup.Item>
         </ListGroup>
