@@ -1,3 +1,4 @@
+"use client";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard/page";
 import KambazNavigation from "./Navigation";

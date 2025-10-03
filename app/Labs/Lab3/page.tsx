@@ -1,4 +1,4 @@
-function Lab3() {
+export default function Lab3() {
     return (
         <div>
             <h2>Lab 3</h2>
@@ -7,4 +7,3 @@ function Lab3() {
         </div>
     );
 }
-export default Lab3;
