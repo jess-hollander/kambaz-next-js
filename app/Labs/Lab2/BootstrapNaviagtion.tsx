@@ -24,7 +24,7 @@ export default function BootstrapNaviagtion() {
             Cards
         </h2>
         <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="images/stacked.jpg" />
+            <Card.Img variant="top" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg" />
             <Card.Body>
                 <Card.Title>Stacking Starship</Card.Title>
                 <Card.Text>

@@ -1,17 +1,46 @@
-import Link from "next/link";
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function TOC() {
+  const pathname = usePathname() ?? '';
+
+  const active = (segment: string) => (pathname.includes(segment) ? 'active' : '');
+
   return (
-    <nav aria-label="Labs table of contents" id="wd-toc">
-      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-        <li id="wd-intro"><Link href="/Labs">Labs Home</Link></li>
-        <li id="wd-a1"><Link href="/Labs/Lab1">Lab 1</Link></li>
-        <li id="wd-a2"><Link href="/Labs/Lab2">Lab 2</Link></li>
-        <li id="wd-a3"><Link href="/Labs/Lab3">Lab 3</Link></li>
-        <li id="wd-kambaz"><Link href="/Account/Signin">Kambaz</Link></li>
-        <li id="wd-github"><a href="https://github.com/jess-hollander" target="_blank" rel="noreferrer">My GitHub</a></li>
-      </ul>
-    </nav>
+    <ul className="nav nav-pills">
+      <li className="nav-item">
+        <Link href="/Labs" className={`nav-link ${pathname === '/Labs' ? 'active' : ''}`}>
+          Labs
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/Labs/Lab1" className={`nav-link ${active('Lab1')}`}>
+          Lab 1
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/Labs/Lab2" className={`nav-link ${active('Lab2')}`}>
+          Lab 2
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/Labs/Lab3" className={`nav-link ${active('Lab3')}`}>
+          Lab 3
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/Account/Signin" className="nav-link">
+          Kambaz
+        </Link>
+      </li>
+      <li className="nav-item">
+        <a id="wd-github" href="https://github.com/jess-hollander" className="nav-link" target="_blank" rel="noopener noreferrer">
+          My GitHub
+        </a>
+      </li>
+    </ul>
   );
 }
 

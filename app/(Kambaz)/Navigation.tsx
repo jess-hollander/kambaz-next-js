@@ -13,34 +13,40 @@ export default function KambazNavigation() {
                 <img src="/images/NEU.png" width="75px" alt="Northeastern University" />
             </ListGroupItem>
             <ListGroupItem className="border-0 bg-black text-center">
-                <Link href="/Account" id="wd-account-link" className="text-white text-decoration-none">
-                    <FaRegCircleUser className="fs-1 text-white" /><br />
-
-                    Account
+                <Link href="/Account" id="wd-account-link"
+                    className="list-group-item text-center border-0 bg-black text-white">
+                    <FaRegCircleUser className="fs-3 text-white" />
+                    <br />Account
                 </Link>
-                <Link href="/Dashboard" id="wd-dashboard-link" className="text-white text-decoration-none">
-                    <AiOutlineDashboard className="fs-1 text-white" /><br />
-                    Dashboard
-                </Link><br />
-                <Link href="/Dashboard" id="wd-course-link" className="text-white text-decoration-none">
-                    <LiaBookSolid className="fs-1 text-white" /><br />
-                    Courses
-                </Link><br />
-                <Link href="/Calendar" id="wd-calendar-link" className="text-white text-decoration-none">
-                    <IoCalendarOutline className="fs-1 text-white" /><br />
-                    Calendar
-                </Link><br />
-                <Link href="/Inbox" id="wd-inbox-link" className="text-white text-decoration-none">
-                    <FaInbox className="fs-1 text-white" /><br />
-                    Inbox
-                </Link><br />
-                <Link href="/Labs/Lab1" id="wd-labs-link" className="text-white text-decoration-none">
-                    <LiaCogSolid className="fs-1 text-white" /><br />
+                <Link href="/Dashboard" id="wd-dashboard-link"
+                    className="list-group-item text-center border-0 bg-white text-danger">
+                    <AiOutlineDashboard className="fs-3 text-danger" />
+                    <br />Dashboard
+                </Link>
+                <Link href="/Dashboard" id="wd-course-link"
+                    className="list-group-item text-center border-0 bg-black text-white">
+                    <LiaBookSolid className="fs-3 text-danger" />
+                    <br />Courses
+                </Link>
+                <Link href="/Calendar" id="wd-calendar-link"
+                    className="list-group-item text-center border-0 bg-black text-white">
+                    <IoCalendarOutline className="fs-3 text-danger" />
+                    <br />Calendar
+                </Link>
+                <Link href="/Inbox" id="wd-inbox-link"
+                    className="list-group-item text-center border-0 bg-black text-white">
+                    <FaInbox className="fs-3 text-danger" />
+                    <br />Inbox
+                </Link>
+                <Link href="/Labs/Lab1" id="wd-labs-link"
+                    className="list-group-item text-center border-0 bg-black text-white">
+                    <LiaCogSolid className="fs-3 text-danger" /><br />
                     Labs
                 </Link><br />
             </ListGroupItem>
         </ListGroup>
     );
 }
+
 
 

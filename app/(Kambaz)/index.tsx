@@ -1,5 +1,5 @@
 "use client";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard/page";
 import KambazNavigation from "./Navigation";
 import Signin from "./Account/Signin/page";
@@ -13,6 +13,7 @@ import CourseStatus from "./Courses/[cid]/Home/Status";
 import "./styles.css";
 export default function Kambaz() {
     return (
+<Router>
 <div>
     <div id="wd-kambaz">
         <KambazNavigation />
@@ -21,7 +22,7 @@ export default function Kambaz() {
                 <Route path="/" element={<Navigate to="Account" />} />
                 <Route path="/Account/*" element={<Signin />} />
                 <Route path="/Dashboard" element={<Dashboard />} />
-                <Route path="/Courses/:cid/*" element={<Home />} />
+                <Route path="/Courses/:cid/*/Home" element={<Home />} />
             </Routes>
         </div>
     </div>
@@ -53,5 +54,6 @@ export default function Kambaz() {
     </div>
 
 </div>
+</Router>
     );
 }
