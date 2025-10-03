@@ -25,6 +25,7 @@ export default function PeopleTable() {
                         <td className="wd-role">STUDENT</td>
                         <td className="wd-last-activity">2020-10-01</td>
                         <td className="wd-total-activity">10:21:32</td>
+                                  {/* Add at least 3 more users such as Bruce Wayne, Steve Rogers, and Natasha Romanoff */}
                     </tr>
                 </tbody>
             </Table>
