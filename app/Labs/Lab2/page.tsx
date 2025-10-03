@@ -1,9 +1,58 @@
+"use client";
+
 import Container from "react-bootstrap/esm/Container";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import BackgroundColors from './BackgroundColors';
+import BootstrapForms from './BootstrapForms';
+import BootstrapGrids from './BootstrapGrids';
+import BootstrapLists from './BootstrapLists';
+import BootstrapNaviagtion from './BootstrapNaviagtion';
+import BootstrapTables from './BootstrapTables';
+import Borders from './Borders';
+import Corners from './Corners';
+import Dimensions from './Dimensions';
+import Flex from './Flex';
+import Float from './Float';
+import ForegroundColors from './ForegroundColors';
+import GridLayout from './GridLayout';
+import Margins from './Margins';
+import Padding from './Padding';
+import Positions from './Positions';
+import ReactIcons from './ReactIcons';
+import ScreenSizeLabel from './ScreenSizeLabel';
+import Selectors from './Selectors';
+import Zindex from './Zindex';
+
 export default function Lab2() {
+    const components = [
+        { name: 'BackgroundColors', Comp: BackgroundColors },
+        { name: 'BootstrapForms', Comp: BootstrapForms },
+        { name: 'BootstrapGrids', Comp: BootstrapGrids },
+        { name: 'BootstrapLists', Comp: BootstrapLists },
+        { name: 'BootstrapNaviagtion', Comp: BootstrapNaviagtion },
+        { name: 'BootstrapTables', Comp: BootstrapTables },
+        { name: 'Borders', Comp: Borders },
+        { name: 'Corners', Comp: Corners },
+        { name: 'Dimensions', Comp: Dimensions },
+        { name: 'Flex', Comp: Flex },
+        { name: 'Float', Comp: Float },
+        { name: 'ForegroundColors', Comp: ForegroundColors },
+        { name: 'GridLayout', Comp: GridLayout },
+        { name: 'Margins', Comp: Margins },
+        { name: 'Padding', Comp: Padding },
+        { name: 'Positions', Comp: Positions },
+        { name: 'ReactIcons', Comp: ReactIcons },
+        { name: 'ScreenSizeLabel', Comp: ScreenSizeLabel },
+        { name: 'Selectors', Comp: Selectors },
+        { name: 'Zindex', Comp: Zindex },
+    ];
+
     return (
         <Container>
+            <div id="wd-lab2" className="container">
+                <Container>
             <div id="wd-lab2" className="container">
                 <h2>Lab 2 - Cascading Style Sheets</h2>
                 <h3>Styling with the STYLE attribute</h3>
@@ -59,6 +108,14 @@ export default function Lab2() {
 
             </div>
         </Container>
+                {components.map(({ name, Comp }) => (
+                    <section key={name} style={{ marginBottom: 28 }}>
+                        <h3>{name}</h3>
+                        {/* @ts-ignore allow rendering components with possible client-only behavior */}
+                        <Comp />
+                    </section>
+                ))}
+            </div>
+        </Container>
     );
-
 }

@@ -1,3 +1,5 @@
+export default function ForegroundColors() {
+    return (
 <div id="wd-css-colors">
     <h2>Colors</h2>
     <h3 className="wd-fg-color-blue">
@@ -8,3 +10,5 @@
             this text is green</span>
     </p>
 </div>
+    );
+}

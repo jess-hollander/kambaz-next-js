@@ -1,4 +1,6 @@
 import Table from "react-bootstrap/Table";
+export default function BootstrapTables() {
+    return (
 <div>
 <div id="wd-css-styling-tables">
     <h2>Tables</h2>
@@ -35,3 +37,5 @@ import Table from "react-bootstrap/Table";
   </Table>
 </div>
 </div>
+    );
+}

@@ -1,4 +1,6 @@
 import { Row, Col } from 'react-bootstrap';
+export default function BootstrapGrids() {
+    return (
 <div>
     <h2>Bootstrap</h2>
     <div id="wd-bs-grid-system">
@@ -90,3 +92,5 @@ import { Row, Col } from 'react-bootstrap';
         </Row>
     </div>
 </div>
+    );
+}

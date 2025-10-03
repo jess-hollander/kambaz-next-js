@@ -1,3 +1,5 @@
+export default function Selectors() {
+    return (
 <div>
     <div id="wd-css-id-selectors">
         <h3>ID selectors</h3>
@@ -45,3 +47,5 @@
     </div>
 
 </div>
+    );
+}

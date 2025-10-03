@@ -1,28 +1,19 @@
-import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 export default function TOC() {
-    return (
-        <Nav variant="pills">
-            <Nav.Item>
-                <Nav.Link to="/Labs" as={Link}>Lab 1</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link to="/Labs/Lab1" as={Link}>Lab 1</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link to="/Labs/Lab2" as={Link} active>Lab 2</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link to="/Labs/Lab3" as={Link}>Lab 3</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link to="/Kambaz" as={Link}>Kambaz</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="https://github.com/jess-hollander">My GitHub</Nav.Link>
-            </Nav.Item>
-        </Nav>
-    );
+  return (
+    <nav aria-label="Labs table of contents" id="wd-toc">
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+        <li id="wd-intro"><Link href="/Labs">Labs Home</Link></li>
+        <li id="wd-a1"><Link href="/Labs/Lab1">Lab 1</Link></li>
+        <li id="wd-a2"><Link href="/Labs/Lab2">Lab 2</Link></li>
+        <li id="wd-a3"><Link href="/Labs/Lab3">Lab 3</Link></li>
+        <li id="wd-kambaz"><Link href="/Account/Signin">Kambaz</Link></li>
+        <li id="wd-github"><a href="https://github.com/jess-hollander" target="_blank" rel="noreferrer">My GitHub</a></li>
+      </ul>
+    </nav>
+  );
 }
+
 
 

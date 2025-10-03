@@ -1,5 +1,7 @@
 import { Row, Col, Form, FormControl, FormGroup, FormLabel, FormSelect, InputGroup, Button } from "react-bootstrap";
 import FormRange from "react-bootstrap/esm/FormRange";
+export default function BootstrapForms() {
+    return (
 <div>
     <div id="wd-css-styling-forms">
         <h2>Forms</h2>
@@ -124,3 +126,5 @@ import FormRange from "react-bootstrap/esm/FormRange";
     </div>
 
 </div >
+    );
+}

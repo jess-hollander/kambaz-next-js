@@ -1,3 +1,5 @@
+export default function Corners() {
+    return (   
 <div id="wd-css-borders">
     <h3>Rounded corners</h3>
     <p className="wd-rounded-corners-top wd-border-thin 
@@ -16,3 +18,5 @@
      wd-padding-fat">
         Different rounded corners</p>
 </div>
+    );
+}

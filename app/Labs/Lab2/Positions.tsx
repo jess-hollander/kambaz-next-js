@@ -1,3 +1,5 @@
+export default function Positions() {
+    return (
 <div>
     <div id="wd-css-position-relative">
         <h2>Relative</h2>
@@ -41,3 +43,5 @@
     </div>
 
 </div>
+    );
+}

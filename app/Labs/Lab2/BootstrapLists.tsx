@@ -1,4 +1,6 @@
 import { ListGroup } from "react-bootstrap";
+export default function BootstrapLists() {
+    return (
 <div>
     <div id="wd-css-styling-lists">
         <h2>Favorite movies</h2>
@@ -33,3 +35,5 @@ import { ListGroup } from "react-bootstrap";
         </ListGroup>
     </div>
 </div>
+    );
+}
