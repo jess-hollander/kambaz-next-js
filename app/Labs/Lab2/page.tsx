@@ -111,7 +111,6 @@ export default function Lab2() {
                 {components.map(({ name, Comp }) => (
                     <section key={name} style={{ marginBottom: 28 }}>
                         <h3>{name}</h3>
-                        {/* @ts-ignore allow rendering components with possible client-only behavior */}
                         <Comp />
                     </section>
                 ))}
