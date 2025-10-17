@@ -1,9 +1,18 @@
-import { BsGripVertical, BsCheckCircle, BsPlus } from "react-icons/bs";
+"use client";
+import { BsGripVertical, BsCheckCircle, BsPlus, BsSearch } from "react-icons/bs";
+import { FaFileAlt } from "react-icons/fa";
 import Link from 'next/link';
+import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 export default function Assignments() {
   return (
-    <div id="wd-assignmentsContent" className="container">
+    <>
+      <style jsx>{`
+        .wd-assignment-link:hover {
+          background-color: #f8f9fa !important;
+        }
+      `}</style>
+      <div id="wd-assignmentsContent" className="container">
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h2 className="text-danger">Assignments</h2>
 
@@ -17,9 +26,9 @@ export default function Assignments() {
       </div>
 
       {/* Search Bar */}
-      <div className="input-group mb-3">
+      <div className="input-group mb-4">
         <span className="input-group-text">
-          <BsGripVertical />
+          <BsSearch />
         </span>
         <input
           type="text"
@@ -29,56 +38,84 @@ export default function Assignments() {
       </div>
 
       {/* Assignments List */}
-      <h3 id="wd-assignments-title">
-        ASSIGNMENTS 40% of Total
-      </h3>
+      <div className="d-flex justify-content-between align-items-center mb-3 p-3 bg-light border">
+        <div className="d-flex align-items-center">
+          <BsGripVertical className="me-2" />
+          <strong>ASSIGNMENTS</strong>
+        </div>
+        <div className="text-muted">
+          40% of Total <BsPlus className="ms-2" />
+        </div>
+      </div>
 
-      <ul id="wd-assignment-list" className="list-group">
+      <ListGroup id="wd-assignment-list" className="list-group">
         {/* Assignment 1 */}
-        <li className="wd-assignment-list-item list-group-item p-3 mb-3">
-          <div className="d-flex align-items-center justify-content-between">
-            <Link href="/Courses/1234/Assignments/123" className="wd-assignment-link text-decoration-none text-dark">
-              <BsGripVertical className="me-2 fs-4" />
-              <strong>A1 - ENV + HTML</strong>
-              <div className="text-muted">
-                Multiple Modules | Not available until May 6 at 12:00am <br />
-                <strong>Due:</strong> May 13 at 11:59pm | <strong>100 pts</strong>
+        <ListGroupItem className="wd-assignment-list-item list-group-item p-0 mb-3 border-0 border-start border-4 border-success">
+          <Link href="/Courses/1234/Assignments/123" className="wd-assignment-link text-decoration-none text-dark d-block p-3" style={{ transition: "background-color 0.2s" }}>
+            <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-start">
+                <BsGripVertical className="me-3 text-muted" />
+                <FaFileAlt className="me-3 text-success fs-5" />
+                <div>
+                  <div>
+                    <strong>A1</strong>
+                  </div>
+                  <div className="text-muted small">
+                    Multiple Modules | Not available until May 6 at 12:00am <br />
+                    <strong>Due</strong> May 13 at 11:59pm | 100 pts
+                  </div>
+                </div>
               </div>
-            </Link>
-            <BsCheckCircle className="text-success fs-4" />
-          </div>
-        </li>
+              <BsCheckCircle className="text-success fs-4" />
+            </div>
+          </Link>
+        </ListGroupItem>
 
         {/* Assignment 2 */}
-        <li className="wd-assignment-list-item list-group-item p-3 mb-3">
-          <div className="d-flex align-items-center justify-content-between">
-            <Link href="/Courses/1234/Assignments/2" className="wd-assignment-link text-decoration-none text-dark">
-              <BsGripVertical className="me-2 fs-4" />
-              <strong>A2 - CSS + BOOTSTRAP</strong>
-              <div className="text-muted">
-                Multiple Modules | Not available until May 13 at 12:00am <br />
-                <strong>Due:</strong> May 20 at 11:59pm | <strong>100 pts</strong>
+        <ListGroupItem className="wd-assignment-list-item list-group-item p-0 mb-3 border-0 border-start border-4 border-success">
+          <Link href="/Courses/1234/Assignments/2" className="wd-assignment-link text-decoration-none text-dark d-block p-3" style={{ transition: "background-color 0.2s" }}>
+            <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-start">
+                <BsGripVertical className="me-3 text-muted" />
+                <FaFileAlt className="me-3 text-success fs-5" />
+                <div>
+                  <div>
+                    <strong>A2</strong>
+                  </div>
+                  <div className="text-muted small">
+                    Multiple Modules | Not available until May 13 at 12:00am <br />
+                    <strong>Due</strong> May 20 at 11:59pm | 100 pts
+                  </div>
+                </div>
               </div>
-            </Link>
-            <BsCheckCircle className="text-success fs-4" />
-          </div>
-        </li>
+              <BsCheckCircle className="text-success fs-4" />
+            </div>
+          </Link>
+        </ListGroupItem>
 
         {/* Assignment 3 */}
-        <li className="wd-assignment-list-item list-group-item p-3 mb-3">
-          <div className="d-flex align-items-center justify-content-between">
-            <Link href="/Courses/1234/Assignments/3" className="wd-assignment-link text-decoration-none text-dark">
-              <BsGripVertical className="me-2 fs-4" />
-              <strong>A3 - JAVASCRIPT + REACT</strong>
-              <div className="text-muted">
-                Multiple Modules | Not available until May 20 at 12:00am <br />
-                <strong>Due:</strong> May 27 at 11:59pm | <strong>100 pts</strong>
+        <ListGroupItem className="wd-assignment-list-item list-group-item p-0 mb-3 border-0 border-start border-4 border-success">
+          <Link href="/Courses/1234/Assignments/3" className="wd-assignment-link text-decoration-none text-dark d-block p-3" style={{ transition: "background-color 0.2s" }}>
+            <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-start">
+                <BsGripVertical className="me-3 text-muted" />
+                <FaFileAlt className="me-3 text-success fs-5" />
+                <div>
+                  <div>
+                    <strong>A3</strong>
+                  </div>
+                  <div className="text-muted small">
+                    Multiple Modules | Not available until May 20 at 12:00am <br />
+                    <strong>Due</strong> May 27 at 11:59pm | 100 pts
+                  </div>
+                </div>
               </div>
-            </Link>
-            <BsCheckCircle className="text-success fs-4" />
-          </div>
-        </li>
-      </ul>
-    </div>
+              <BsCheckCircle className="text-success fs-4" />
+            </div>
+          </Link>
+        </ListGroupItem>
+      </ListGroup>
+      </div>
+    </>
   );
 }
