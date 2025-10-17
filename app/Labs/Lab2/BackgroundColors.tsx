@@ -11,9 +11,7 @@ export default function BackgroundColors() {
             and the foreground white
         </span>
     </p>
-    <h3 className="wd-bg-color-white wd-fg-color-blue">
-        White on Blue Heading</h3>
-    <p className="wd-bg-color-black wd-fg-color-red">
+    <p className="wd-bg-color-red wd-fg-color-black">
         Black on Red Paragraph </p>
 </div>
     );

@@ -16,11 +16,10 @@ export default async function CoursesLayout(
                 <div className="d-none d-sm-block">
                     <CourseNavigation />
                 </div>
-            </div>
-            <div className="flex-fill">
-                {children}
+                <div className="flex-fill">
+                    {children}
+                </div>
             </div>
         </div>
-
     );
 }
