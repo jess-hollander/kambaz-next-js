@@ -51,7 +51,7 @@ export default function Assignments() {
       </div>
 
       {/* Assignments List */}
-      <div className="d-flex justify-content-between align-items-center mb-3 p-3 bg-light border">
+      <div className="d-flex justify-content-between align-items-center mb-3 p-3 bg-light border-start border-success border-4">
         <div className="d-flex align-items-center">
           <BsGripVertical className="me-2" />
           <strong>ASSIGNMENTS</strong>
@@ -65,7 +65,7 @@ export default function Assignments() {
         {assignments
           .filter((assignment: Assignment) => assignment.course === cid)
           .map((assignment: Assignment) => (
-            <li key={assignment._id} className="wd-assignment-list-item list-group-item p-0 mb-3 border-start border-success border-4">
+            <li key={assignment._id} className="wd-assignment-list-item list-group-item p-0 mb-3 border-0 border-start border-4 border-success">
               <Link href={`/Courses/${cid}/Assignments/${assignment._id}`} className="wd-assignment-link text-decoration-none text-dark d-block p-3" style={{ transition: "background-color 0.2s" }}>
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-start">
