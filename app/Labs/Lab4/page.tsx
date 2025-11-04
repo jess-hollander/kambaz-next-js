@@ -6,7 +6,7 @@ import EventObject from "./EventObject";
 import Counter from "./Counter";
 import BooleanStateVariables from "./BooleanStateVariables";
 import StringStateVariables from "./StringStateVariables";
-import DateStateVariable from "c:/Users/jessi/fall25/webdev/kambaz-next-js/app/Labs/Lab4/DataStateVariable";
+import DateStateVariable from "./DataStateVariable";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
 import ReduxExamples from "./ReduxExamples/page";
