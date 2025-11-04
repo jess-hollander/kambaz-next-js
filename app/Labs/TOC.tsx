@@ -31,6 +31,11 @@ export default function TOC() {
         </Link>
       </li>
       <li className="nav-item">
+        <Link href="/Labs/Lab4" className={`nav-link ${active('Lab4')}`}>
+          Lab 4
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link href="/Account/Signin" className="nav-link">
           Kambaz
         </Link>
