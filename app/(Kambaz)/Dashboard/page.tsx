@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import { Row, Col, Card, CardImg, CardBody, CardTitle, CardText, Button, FormControl } from "react-bootstrap";
 import { RootState } from "../store";
-import { addNewCourse, deleteCourse, updateCourse } from "./Courses/reducer";
+import { addNewCourse, deleteCourse, updateCourse } from "c:/Users/jessi/fall25/webdev/kambaz-next-js/app/(Kambaz)/Courses/reducer";
 import { enroll, unenroll } from "./enrollmentReducer";
 
 interface Course {

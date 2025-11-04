@@ -6,10 +6,10 @@ import EventObject from "./EventObject";
 import Counter from "./Counter";
 import BooleanStateVariables from "./BooleanStateVariables";
 import StringStateVariables from "./StringStateVariables";
-import DateStateVariable from "./DateStateVariable";
+import DateStateVariable from "c:/Users/jessi/fall25/webdev/kambaz-next-js/app/Labs/Lab4/DataStateVariable";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
-import ReduxExamples from "./ReduxExamples";
+import ReduxExamples from "./ReduxExamples/page";
 import { Provider } from "react-redux";
 import store from "./store";
 export default function Lab4() {
@@ -22,7 +22,7 @@ export default function Lab4() {
       <h2>Lab 4 - React Events</h2>
       <ClickEvent />
       <PassingDataOnEvent />
-      <PassingFunctions theFunction={sayHello} />
+      <PassingFunctions someFunction={sayHello} />
       <EventObject />
       <Counter />
       <BooleanStateVariables />
