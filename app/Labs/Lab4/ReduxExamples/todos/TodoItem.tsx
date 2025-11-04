@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Button, ListGroupItem } from "react-bootstrap";
 import { useDispatch } from "react-redux";
