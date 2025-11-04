@@ -6,7 +6,7 @@ import coursesReducer from "./Courses/reducer";
 import modulesReducer from "./Courses/[cid]/Modules/reducer";
 import accountReducer from "./Account/reducer";
 import assignmentsReducer from "./Courses/Assignments/reducer";
-import enrollmentsReducer from "./Dashboard/enrollmentsReducer";
+import enrollmentsReducer from "./Dashboard/enrollmentReducer";
 
 const persistConfig = {
   key: "root",
