@@ -9,7 +9,7 @@ function Lab5() {
     return (
       <div id="wd-lab5">
         <h2>Lab 5 - Node.js</h2>
-        <a className="btn btn-primary" href={`${API_BASE}/a5/welcome`}>
+        <a className="btn btn-primary" href={`${API_BASE}/lab5/welcome`}>
           Welcome
         </a>
         <EncodingParametersInURLs />
