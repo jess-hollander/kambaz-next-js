@@ -4,38 +4,30 @@ import { useRouter } from "next/navigation";
 import { setCurrentUser } from "../reducer";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import * as db from "../../Database";
+import axios from "axios";
 import { FormControl, Button } from "react-bootstrap";
+
+const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER || "https://kambaz-node-server-app-dli0.onrender.com";
 
 interface Credentials {
   username?: string;
   password?: string;
 }
 
-interface User {
-  _id: string;
-  username: string;
-  password: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  dob: string;
-  role: string;
-}
 
 export default function Signin() {
   const [credentials, setCredentials] = useState<Credentials>({});
   const dispatch = useDispatch();
   const router = useRouter();
-  const signin = () => {
-    const user = db.users.find(
-      (u: User) =>
-        u.username === credentials.username &&
-        u.password === credentials.password
-    );
-    if (user) {
+  const signin = async () => {
+    try {
+      const response = await axios.post(`${API_BASE}/api/users/signin`, credentials);
+      const user = response.data;
       dispatch(setCurrentUser(user));
       router.push("/Dashboard");
+    } catch (error) {
+      console.error("Signin failed:", error);
+      alert("Invalid username or password");
     }
   };
   return (
