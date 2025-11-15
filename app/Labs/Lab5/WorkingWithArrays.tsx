@@ -9,7 +9,7 @@ interface Todo {
   completed: boolean;
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
+const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER;
 
 function WorkingWithArrays() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);

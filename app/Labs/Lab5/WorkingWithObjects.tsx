@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
+const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER;
 function WorkingWithObjects() {
 
   const [assignment, setAssignment] = useState({
