@@ -10,7 +10,7 @@ import { FormControl, Button } from "react-bootstrap";
 const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER || "https://kambaz-node-server-app-dli0.onrender.com";
 
 export default function Signup() {
-    const [user, setUser] = useState({
+    const [user, setUser] = useState({ 
         username: "",
         password: "",
         firstName: "",
