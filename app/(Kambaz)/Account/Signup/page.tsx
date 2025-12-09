@@ -7,10 +7,11 @@ import { useDispatch } from "react-redux";
 import axios, { AxiosError } from "axios";
 import { FormControl, Button } from "react-bootstrap";
 
-const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER || "https://kambaz-node-server-app-dli0.onrender.com";
+const axiosWithCredentials = axios.create({ withCredentials: true });
+const API_BASE = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:4000";
 
 export default function Signup() {
-    const [user, setUser] = useState({ 
+    const [user, setUser] = useState({
         username: "",
         password: "",
         firstName: "",
@@ -34,7 +35,7 @@ export default function Signup() {
         }
         
         try {
-            const response = await axios.post(`${API_BASE}/api/users/signup`, user);
+            const response = await axiosWithCredentials.post(`${API_BASE}/api/users/signup`, user);
             const newUser = response.data;
             dispatch(setCurrentUser(newUser));
             router.push("/Dashboard");

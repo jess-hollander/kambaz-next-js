@@ -1,5 +1,5 @@
 "use client";
-import { addModule, editModule, updateModule, deleteModule } from "./reducer";
+import { addModule, editModule, updateModule, deleteModule, setModules } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { useParams } from "next/navigation";
@@ -9,6 +9,7 @@ import { BsGripVertical } from "react-icons/bs";
 import LessonControlButtons from "./LessonControlButtons";
 import ModuleControlButtons from "./ModuleControlButtons";
 import { RootState } from "../../../store";
+import * as client from "../../client";
 
 interface Lesson {
   _id: string;
@@ -22,6 +23,7 @@ interface Module {
   course: string;
   lessons?: Lesson[];
   editing?: boolean;
+  [key: string]: unknown;
 }
 
 export default function Modules() {
@@ -29,6 +31,19 @@ export default function Modules() {
   const [moduleName, setModuleName] = useState("");
   const { modules } = useSelector((state: RootState) => state.modulesReducer);
   const dispatch = useDispatch();
+  
+  const onRemoveModule = async (moduleId: string) => {
+    await client.deleteModule(cid as string, moduleId);
+    dispatch(deleteModule(moduleId));
+  };
+  
+  const onUpdateModule = async (module: Module) => {
+    await client.updateModule(cid as string, module);
+    const newModules = modules.map((m: Module) =>
+      m._id === module._id ? module : m
+    );
+    dispatch(setModules(newModules));
+  };
   
   return (
     <div>
@@ -47,14 +62,14 @@ export default function Modules() {
                     onChange={(e) => dispatch(updateModule({ ...module, name: e.target.value }))}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
-                        dispatch(updateModule({ ...module, editing: false }));
+                        onUpdateModule({ ...module, editing: false });
                       }
                     }}
                     defaultValue={module.name}
                   />
                 )}
                 <ModuleControlButtons moduleId={module._id} 
-                  deleteModule={(moduleId) => dispatch(deleteModule(moduleId))} 
+                  deleteModule={(moduleId) => onRemoveModule(moduleId)} 
                   editModule={(moduleId) => dispatch(editModule(moduleId))} />
               </div>
               {module.lessons && (

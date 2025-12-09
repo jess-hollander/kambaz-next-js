@@ -5,9 +5,10 @@ import { FaFileAlt, FaTrash } from "react-icons/fa";
 import Link from 'next/link';
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../store";
-import { deleteAssignment } from "../../Assignments/reducer";
-import { useState } from "react";
+import { deleteAssignment, setAssignments } from "../../Assignments/reducer";
+import { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
+import * as coursesClient from "../../client";
 
 interface Assignment {
   _id: string;
@@ -27,13 +28,24 @@ export default function Assignments() {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [assignmentToDelete, setAssignmentToDelete] = useState<string | null>(null);
 
+  const fetchAssignments = async () => {
+    const courseAssignments = await coursesClient.findAssignmentsForCourse(cid as string);
+    dispatch(setAssignments(courseAssignments));
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cid]);
+
   const handleDeleteClick = (assignmentId: string) => {
     setAssignmentToDelete(assignmentId);
     setShowDeleteDialog(true);
   };
 
-  const handleConfirmDelete = () => {
+  const handleConfirmDelete = async () => {
     if (assignmentToDelete) {
+      await coursesClient.deleteAssignment(assignmentToDelete);
       dispatch(deleteAssignment(assignmentToDelete));
     }
     setShowDeleteDialog(false);

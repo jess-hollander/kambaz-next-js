@@ -7,7 +7,8 @@ import { useState } from "react";
 import axios from "axios";
 import { FormControl, Button } from "react-bootstrap";
 
-const API_BASE = process.env.NEXT_PUBLIC_REMOTE_SERVER || "https://kambaz-node-server-app-dli0.onrender.com";
+const axiosWithCredentials = axios.create({ withCredentials: true });
+const API_BASE = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:4000";
 
 interface Credentials {
   username?: string;
@@ -21,7 +22,7 @@ export default function Signin() {
   const router = useRouter();
   const signin = async () => {
     try {
-      const response = await axios.post(`${API_BASE}/api/users/signin`, credentials);
+      const response = await axiosWithCredentials.post(`${API_BASE}/api/users/signin`, credentials);
       const user = response.data;
       dispatch(setCurrentUser(user));
       router.push("/Dashboard");

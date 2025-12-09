@@ -21,6 +21,12 @@ export default function CoursesLayout({
 
   useEffect(() => {
     if (currentUser) {
+      // Allow FACULTY and ADMIN to view all courses
+      if (currentUser.role === "FACULTY" || currentUser.role === "ADMIN") {
+        return;
+      }
+      
+      // Students and TAs must be enrolled
       const isEnrolled = enrollments.some(
         (enrollment) =>
           enrollment.user === currentUser._id && enrollment.course === cid

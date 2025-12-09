@@ -7,11 +7,12 @@ import modulesReducer from "./Courses/[cid]/Modules/reducer";
 import accountReducer from "./Account/reducer";
 import assignmentsReducer from "./Courses/Assignments/reducer";
 import enrollmentsReducer from "./Dashboard/enrollmentReducer";
+import quizzesReducer from "./Courses/[cid]/Quizzes/reducer";
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["accountReducer", "enrollmentsReducer", "coursesReducer", "modulesReducer", "assignmentsReducer"],
+  whitelist: ["accountReducer", "enrollmentsReducer", "coursesReducer", "modulesReducer", "assignmentsReducer", "quizzesReducer"],
 };
 
 const rootReducer = combineReducers({
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   accountReducer,
   assignmentsReducer,
   enrollmentsReducer,
+  quizzesReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

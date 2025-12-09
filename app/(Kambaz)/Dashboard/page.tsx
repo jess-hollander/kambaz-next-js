@@ -6,6 +6,7 @@ import { Row, Col, Card, CardImg, CardBody, CardTitle, CardText, Button, FormCon
 import { RootState } from "../store";
 import { addNewCourse, deleteCourse, updateCourse } from "../Courses/reducer";
 import { enroll, unenroll } from "./enrollmentReducer";
+import * as coursesClient from "../Courses/client";
 
 interface Course {
   _id: string;
@@ -51,14 +52,16 @@ export default function Dashboard() {
     );
   };
 
-  const handleEnroll = (courseId: string) => {
+  const handleEnroll = async (courseId: string) => {
     if (currentUser) {
+      await coursesClient.enrollIntoCourse("current", courseId);
       dispatch(enroll({ userId: currentUser._id, courseId }));
     }
   };
 
-  const handleUnenroll = (courseId: string) => {
+  const handleUnenroll = async (courseId: string) => {
     if (currentUser) {
+      await coursesClient.unenrollFromCourse("current", courseId);
       dispatch(unenroll({ userId: currentUser._id, courseId }));
     }
   };
